@@ -43,7 +43,7 @@ function App() {
       </form>
       <div className="__all_todos_container flex flex-col gap-3">
         {allTodos?.map((todo, index) => {
-          return <TodoItem index={index} todo={todo} />;
+          return <TodoItem key={index} index={index} todo={todo} />;
         })}
       </div>
       {editState && <EditModal />}
